@@ -48,11 +48,15 @@ export const Navbar = () => {
       maxWidth="xl"
       position="sticky"
       isBlurred={false}
-      className="bg-white shadow-xl"
+      className="bg-white shadow-xl text-primary"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink
+            className="flex justify-start items-center gap-1 text-primary"
+            href="/"
+            onClick={() => setActiveMenu("")}
+          >
             <Logo />
             <p className="font-bold text-inherit">Ali Kusnadin</p>
           </NextLink>
@@ -62,15 +66,18 @@ export const Navbar = () => {
       <NavbarContent justify="end">
         <ul className="lg:flex gap-4 justify-end ml-2">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href} className="text-2xl">
+            <NavbarItem
+              key={item.href}
+              className="text-2xl text-primary font-medium"
+            >
               <NextLink
                 data-active={activeMenu === item.href.replace("#", "")}
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-bold",
-                  "relative",
+                  linkStyles({ color: "warning" }),
+                  "data-[active=true]:text-[#ffb22c] data-[active=true]:font-bold",
+                  "relative text-primary",
                   "after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:rounded-[2px]",
-                  "data-[active=true]:after:bg-primary",
+                  "data-[active=true]:after:bg-[#ffb22c]",
                 )}
                 color="foreground"
                 href={item.href}
@@ -82,37 +89,6 @@ export const Navbar = () => {
           ))}
         </ul>
       </NavbarContent>
-
-      {/*<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>*/}
-
-      {/*<NavbarMenu>
-        {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>*/}
     </HeroUINavbar>
   );
 };

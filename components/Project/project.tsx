@@ -4,7 +4,7 @@ import { projectList } from "./list-project";
 export const Project = () => {
   const projects = projectList;
   return (
-    <>
+    <section id="project">
       <div className="bg-white bg-fourth text-primary py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="">
@@ -34,6 +34,6 @@ export const Project = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };

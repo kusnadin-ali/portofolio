@@ -35,7 +35,7 @@ export const Landing = () => {
     return () => instance.destroy();
   }, []);
   return (
-    <>
+    <section id="home">
       <div className="h-screen flex flex-col justify-center items-start py-4 px-2 md:px-8 lg:px-24 space-y-5">
         <div className="font-bold text-4xl text-fourth">
           Hi, I am Ali Kusnadin
@@ -62,6 +62,6 @@ export const Landing = () => {
           </Button>
         </div>
       </div>
-    </>
+    </section>
   );
 };
