@@ -10,8 +10,8 @@ export const About = () => {
               About Me
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Passionate software developer dedicated to creating exceptional
-              digital experiences
+              Backend-oriented developer focused on building scalable and
+              well-structured web applications
             </p>
           </div>
 
@@ -26,25 +26,27 @@ export const About = () => {
               <h3 className="text-3xl font-bold text-[#000000] mb-6">
                 Hello, I'm a Software Developer
               </h3>
+
               <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                With over 6 years of experience in software development, I
-                specialize in building robust, scalable applications that solve
-                real-world problems. My journey in tech has been driven by a
-                passion for creating elegant solutions through clean code and
-                innovative thinking.
+                Backend-oriented developer focused on <b>Java Spring Boot</b>,
+                with experience using
+                <b> Angular</b> and <b>Next.js</b> to build full-stack web
+                applications. Currently working professionally while preparing
+                to continue formal education to strengthen long-term technical
+                foundations.
               </p>
+
               <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                I have extensive experience working with modern web
-                technologies, cloud platforms, and agile methodologies.
-                Throughout my career, I've had the privilege of working with
-                talented teams on diverse projects, from startups to
-                enterprise-level applications.
+                Work is approached in a structured and system-driven way,
+                starting from understanding business requirements and system
+                flow before moving into implementation.
               </p>
+
               <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                When I'm not coding, I enjoy contributing to open-source
-                projects, writing technical articles, and staying updated with
-                the latest industry trends. I believe in continuous learning and
-                sharing knowledge with the developer community.
+                Enjoys collaborative team environments where technical
+                discussions help shape better solutions. The mid-term goal is to
+                grow into a Fullstack Developer capable of handling complex
+                features and understanding application architecture end-to-end.
               </p>
             </div>
           </div>
