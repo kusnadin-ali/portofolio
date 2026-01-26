@@ -1,3 +1,5 @@
+import { Logo } from "../icons";
+
 export const Contact = () => {
   return (
     <section id="contact">
@@ -7,12 +9,8 @@ export const Contact = () => {
             {/* Left: Logo & Description */}
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <img
-                  alt="Logo"
-                  className="h-10 w-10 object-contain"
-                  src="https://public.readdy.ai/ai/img_res/db41b62d-6e63-4298-90a8-7216d87eb749.png"
-                />
-                <span className="text-xl font-bold">Portfolio</span>
+                <Logo />
+                <span className="text-xl font-bold">Ali Kusnadin</span>
               </div>
 
               <p className="text-sm text-white/80 leading-relaxed">
@@ -27,7 +25,7 @@ export const Contact = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#projects"
+                    href="#project"
                     className="text-sm text-white/80 hover:text-[#FFB22C] transition-colors cursor-pointer whitespace-nowrap"
                   >
                     Projects
@@ -58,41 +56,47 @@ export const Contact = () => {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:kusnadin.ali.12@gmail.com"
                   className="flex items-center text-sm text-white/80 hover:text-[#FFB22C] transition-colors cursor-pointer"
                 >
                   <i className="ri-mail-line mr-3 text-lg" />
-                  hello@example.com
+                  kusnadin.ali.12@gmail.com
                 </a>
 
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+6289668161113"
                   className="flex items-center text-sm text-white/80 hover:text-[#FFB22C] transition-colors cursor-pointer"
                 >
                   <i className="ri-phone-line mr-3 text-lg" />
-                  +1 (234) 567-890
+                  +62 896-6816-1113
                 </a>
 
                 <div className="flex items-center text-sm text-white/80">
                   <i className="ri-map-pin-line mr-3 text-lg" />
-                  San Francisco, CA
+                  Bandung, Indonesia
                 </div>
               </div>
 
               {/* Social Media */}
               <div className="flex space-x-4 mt-6">
                 {[
-                  "ri-github-line",
-                  "ri-linkedin-box-line",
-                  "ri-twitter-line",
-                  "ri-dribbble-line",
-                ].map((icon) => (
+                  {
+                    url: "https://github.com/kusnadin-ali",
+                    icon: "ri-github-line",
+                  },
+                  {
+                    url: "https://www.linkedin.com/in/kusnadin-ali/",
+                    icon: "ri-linkedin-box-line",
+                  },
+                ].map((data) => (
                   <a
-                    key={icon}
-                    href="#"
+                    key={data.icon}
+                    href={data.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFB22C] hover:text-black transition-all cursor-pointer"
                   >
-                    <i className={`${icon} text-lg`} />
+                    <i className={`${data.icon} text-lg`}></i>
                   </a>
                 ))}
               </div>
@@ -101,17 +105,14 @@ export const Contact = () => {
 
           {/* Footer Bottom */}
           <div className="border-t border-white/20 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-              <p>© 2026 Portfolio. All rights reserved.</p>
+            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/70 gap-4">
+              <p>
+                © {new Date().getFullYear()} Ali Kusnadin. All rights reserved.
+              </p>
 
-              <a
-                href="https://readdy.ai/?ref=logo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-[#FFB22C] transition-colors cursor-pointer whitespace-nowrap mt-4 md:mt-0"
-              >
-                Powered by Readdy
-              </a>
+              <p className="text-white/60">
+                Built with Next.js, Tailwind CSS & HeroUI
+              </p>
             </div>
           </div>
         </div>
